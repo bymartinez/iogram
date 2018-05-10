@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 //Pages
 import Home from './pages/Home';
+import UploadImage from './pages/UploadImage';
+import Login from './pages/Login';
 
 const Routes = () => {
   return (
@@ -11,6 +13,14 @@ const Routes = () => {
           exact
           path='/'
           component={Home} />
+
+        <Route
+          path='/upload-image'
+          component={UploadImage} />
+
+        <Route 
+          path='/login'
+          component={Login} />
       </span>
     </BrowserRouter>
   );
