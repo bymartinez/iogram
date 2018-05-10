@@ -19,7 +19,7 @@ class ImageList extends React.Component {
     const databaseRef = firebase.database().ref('images');
     databaseRef.on('value', (snapshot) => {
       const imagesKeys = Object.keys(snapshot.val());
-      const images = imagesKeys.map((key) => snapshot.val()[key]);
+      const images = imagesKeys.map((key) => snapshot.val()[key]).reverse();
       this.setState({
         images
       });
